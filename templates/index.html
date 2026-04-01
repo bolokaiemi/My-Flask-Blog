@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="header">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="{{ url_for('home') }}" class="logo-container">
+            <img src="/static/images/divine.png" alt="Divine Blog Logo" class="logo">
+            <span class="logo-text">Divine Blog</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('add') }}">Review</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+            </ul>
+        </nav>
+
+        <!-- Profile Picture -->
+        <img src="/static/images/profile-logo.jpeg" alt="Profile" class="profile-pic">
+
+    </div>
+
+    <h1 class="title">Welcome to MyDivine Blog!</h1>
+</header>
+
+<a href="{{ url_for('add') }}" class="add-btn">➕ Add New Post</a>
+
+{% for post in posts %}
+<div class="post">
+    <h2>{{ post.title }}</h2>
+    <p><em>Written by {{ post.author }}</em></p>
+    <p>{{ post.content }}</p>
+
+    <!-- Action buttons -->
+    <a href="{{ url_for('update', post_id=post.id) }}" class="update-btn">✏️ Update</a>
+    <a href="{{ url_for('delete', post_id=post.id) }}" class="delete-btn">🗑️ Delete</a>
+    <a href="{{ url_for('like', post_id=post.id) }}" class="like-btn">❤️ Like ({{ post.likes }})</a>
+    <a href="{{ url_for('testimonies', post_id=post.id) }}" class="testimony-btn">📝 Testimonies</a>
+</div>
+{% endfor %}
+
+<div class ="custom-social-container">
+
+<a href="https://facebook.com" class="custom-social-link facebook">Facebook</a>
+<a href="https://twitter.com" class="custom-social-link twitter">Twitter</a>
+<a href="https://instagram.com" class="custom-social-link instagram">Instagram</a>
+<a href="https://linkedin.com" class="custom-social-link linkedin">LinkedIn</a>
+<a href="https://youtube.com" class="custom-social-link youtube">YouTube</a>
+
+</div>
+</body>
+</html>

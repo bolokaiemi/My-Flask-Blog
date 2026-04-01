@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6a6a, #ff3d3d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.delete-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Title */
+.delete-title {
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+/* Text */
+.delete-text {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Post preview */
+.post-preview {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.delete-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirm-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.confirm-btn:hover {
+    background: #c0392b;
+}
+
+.cancel-btn {
+    text-decoration: none;
+    background: #bdc3c7;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.cancel-btn:hover {
+    background: #95a5a6;
+}

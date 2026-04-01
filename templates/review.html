@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Reviews</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Submit a Review</h1>
+        <form action="/review" method="POST">
+            <label for="post_id">Post ID:</label>
+            <input type="text" id="post_id" name="post_id" required>
+
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="review">Review:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+        {% if message %}
+        <p class="confirmation">{{ message }}</p>
+        {% endif %}
+
+        <h2>All Reviews</h2>
+        <div class="review-list">
+            {% for r in reviews %}
+            <div class="review-item">
+                <p><strong>Post {{ r.post_id }} - {{ r.name }}:</strong> {{ r.review }}</p>
+            </div>
+            {% else %}
+            <p>No reviews yet.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

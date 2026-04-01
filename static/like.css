@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.like-container {
+    text-align: center;
+}
+
+/* Card */
+.post-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Likes */
+.likes {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Button */
+.back-btn {
+    text-decoration: none;
+    background: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.back-btn:hover {
+    background: #c0392b;
+}

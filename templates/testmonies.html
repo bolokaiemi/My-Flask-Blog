@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Share Your Testimony</h1>
+        <form action="/testimonies" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="message">Testimony:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if message %}
+        <p class="confirmation">{{ message }}</p>
+        {% endif %}
+
+        <h2>All Testimonies</h2>
+        <div class="testimony-list">
+            {% for t in testimonies %}
+            <div class="testimony-item">
+                <p><strong>{{ t.name }}:</strong> {{ t.message }}</p>
+            </div>
+            {% else %}
+            <p>No testimonies yet.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

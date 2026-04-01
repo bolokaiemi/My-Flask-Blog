@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liked Post</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='like.css') }}">
+</head>
+<body>
+
+<div class="like-container">
+    <h2>❤️ You liked this post!</h2>
+
+    <div class="post-card">
+        <h3>{{ post.title }}</h3>
+        <p><em>{{ post.author }}</em></p>
+        <p>{{ post.content }}</p>
+        <p class="likes">❤️ {{ post.likes }} Likes</p>
+    </div>
+
+    <a href="{{ url_for('home') }}" class="back-btn">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>
