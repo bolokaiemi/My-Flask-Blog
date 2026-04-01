@@ -1,0 +1,12 @@
+[
+    {"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
+    {"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."},
+    {"id": 3, "author": "Alice Smith", "title": "Getting Started", "content": "Here are some tips to get started with blogging."},
+    {"id": 4, "author": "Bob Johnson", "title": "Tech Trends 2026", "content": "Let's explore the latest trends in technology this year."},
+    {"id": 5, "author": "Charlie Brown", "title": "Daily Routine", "content": "A look into my daily routine and productivity habits."},
+    {"id": 6, "author": "Diana Prince", "title": "Healthy Living", "content": "Simple ways to maintain a healthy lifestyle."},
+    {"id": 7, "author": "Ethan Hunt", "title": "Travel Guide", "content": "Top destinations you should visit this year."},
+    {"id": 8, "author": "Fiona Gallagher", "title": "Budget Tips", "content": "How to save money effectively each month."},
+    {"id": 9, "author": "George Martin", "title": "Writing Skills", "content": "Improve your writing with these simple techniques."},
+    {"id": 10, "author": "Hannah Lee", "title": "Learning Coding", "content": "Best resources to start learning programming."}
+]
