@@ -3,29 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>MyDivine Blog</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="header">
     <div class="nav-container">
 
         <!-- Logo -->
         <a href="{{ url_for('home') }}" class="logo-container">
-            <img src="/static/images/divine.png" alt="Divine Blog Logo" class="logo">
-            <span class="logo-text">Divine Blog</span>
+            <img src="/static/images/divine.png" alt="Logo" class="logo">
         </a>
 
-        <!-- Navigation Links -->
+        <!-- Navigation -->
         <nav class="navbar">
-            <ul>
+            <ul class="nav-links">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('add') }}">Review</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
             </ul>
         </nav>
 
-        <!-- Profile Picture -->
+        <!-- Auth -->
+        <div class="auth-link">
+            {% if session.get('user') %}
+                <span class="user-profile">
+                    <i class="fa fa-user"></i> {{ session['user'] }}
+                </span>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">
+                    <i class="fa fa-user"></i> Login
+                </a>
+            {% endif %}
+        </div>
+
+        <!-- Profile Image -->
         <img src="/static/images/profile-logo.jpeg" alt="Profile" class="profile-pic">
 
     </div>
@@ -33,30 +53,102 @@
     <h1 class="title">Welcome to MyDivine Blog!</h1>
 </header>
 
-<a href="{{ url_for('add') }}" class="add-btn">➕ Add New Post</a>
+<!-- ================= ADD BUTTON ================= -->
+<div style="text-align:center; margin:20px;">
+    <a href="{{ url_for('add') }}" class="add-btn">➕ Add New Post</a>
+</div>
 
+<!-- ================= POSTS ================= -->
 {% for post in posts %}
 <div class="post">
+
     <h2>{{ post.title }}</h2>
     <p><em>Written by {{ post.author }}</em></p>
     <p>{{ post.content }}</p>
 
-    <!-- Action buttons -->
-    <a href="{{ url_for('update', post_id=post.id) }}" class="update-btn">✏️ Update</a>
-    <a href="{{ url_for('delete', post_id=post.id) }}" class="delete-btn">🗑️ Delete</a>
-    <a href="{{ url_for('like', post_id=post.id) }}" class="like-btn">❤️ Like ({{ post.likes }})</a>
-    <a href="{{ url_for('testimonies', post_id=post.id) }}" class="testimony-btn">📝 Testimonies</a>
+    <!-- BUTTON ROW -->
+    <div class="button-row">
+
+        <!-- UPDATE -->
+        <a href="{{ url_for('update', post_id=post.id) }}" class="update-btn">
+            ✏️ Update
+        </a>
+
+        <!-- DELETE -->
+        <form action="{{ url_for('delete', post_id=post.id) }}" method="POST">
+            <button type="submit" class="delete-btn">
+                🗑️ Delete
+            </button>
+        </form>
+
+        <!-- LIKE -->
+        <form action="{{ url_for('like', post_id=post.id) }}" method="POST">
+            <button type="submit" class="like-btn">
+                ❤️ Like ({{ post.likes }})
+            </button>
+        </form>
+
+        <!-- TESTIMONIES -->
+        <a href="{{ url_for('testimonies', post_id=post.id) }}" class="testimony-btn">
+            📝 Testimonies
+        </a>
+
+        <h1>Testimonies for "{{ post.title }}"</h1>
+
+<!-- ADD FORM -->
+<form action="{{ url_for('submit_testimony') }}" method="POST">
+    <input type="hidden" name="post_id" value="{{ post.id }}">
+
+    <textarea name="content" placeholder="Write your testimony..." required></textarea>
+    <button type="submit" class="add-btn">Submit</button>
+</form>
+
+<hr>
+
+<!-- DISPLAY TESTIMONIES -->
+{% if testimonies %}
+    {% for t in testimonies %}
+        <div class="testimony-box">
+            <p>{{ t[1] }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No testimonies yet.</p>
+{% endif %}
+
+<a href="{{ url_for('home') }}">⬅ Back</a>
+    </div>
+
 </div>
 {% endfor %}
 
-<div class ="custom-social-container">
+<!-- ================= SOCIAL ================= -->
+<div class="custom-social-container">
 
-<a href="https://facebook.com" class="custom-social-link facebook">Facebook</a>
-<a href="https://twitter.com" class="custom-social-link twitter">Twitter</a>
-<a href="https://instagram.com" class="custom-social-link instagram">Instagram</a>
-<a href="https://linkedin.com" class="custom-social-link linkedin">LinkedIn</a>
-<a href="https://youtube.com" class="custom-social-link youtube">YouTube</a>
+    <a href="https://facebook.com" class="custom-social-link facebook">Facebook</a>
+    <a href="https://twitter.com" class="custom-social-link twitter">Twitter</a>
+    <a href="https://instagram.com" class="custom-social-link instagram">Instagram</a>
+    <a href="https://linkedin.com" class="custom-social-link linkedin">LinkedIn</a>
+    <a href="https://youtube.com" class="custom-social-link youtube">YouTube</a>
 
 </div>
+
+<!-- ================= SIGNUP ================= -->
+<div class="sign-up container">
+    <h1>Join Our Blog</h1>
+
+    <form method="POST" action="/signup">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    {% if message %}
+        <p id="message">{{ message }}</p>
+    {% endif %}
+</div>
+
 </body>
 </html>

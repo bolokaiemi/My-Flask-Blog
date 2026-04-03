@@ -1,12 +1,23 @@
 [
-    {"id": 1, "author": "John Doe", "title": "First Post", "content": "This is my first post."},
-    {"id": 2, "author": "Jane Doe", "title": "Second Post", "content": "This is another post."},
-    {"id": 3, "author": "Alice Smith", "title": "Getting Started", "content": "Here are some tips to get started with blogging."},
-    {"id": 4, "author": "Bob Johnson", "title": "Tech Trends 2026", "content": "Let's explore the latest trends in technology this year."},
-    {"id": 5, "author": "Charlie Brown", "title": "Daily Routine", "content": "A look into my daily routine and productivity habits."},
-    {"id": 6, "author": "Diana Prince", "title": "Healthy Living", "content": "Simple ways to maintain a healthy lifestyle."},
-    {"id": 7, "author": "Ethan Hunt", "title": "Travel Guide", "content": "Top destinations you should visit this year."},
-    {"id": 8, "author": "Fiona Gallagher", "title": "Budget Tips", "content": "How to save money effectively each month."},
-    {"id": 9, "author": "George Martin", "title": "Writing Skills", "content": "Improve your writing with these simple techniques."},
-    {"id": 10, "author": "Hannah Lee", "title": "Learning Coding", "content": "Best resources to start learning programming."}
+    {
+        "id": 9,
+        "author": "George Martin",
+        "title": "Writing Skills",
+        "content": "Improve your writing with these simple techniques.",
+        "likes": 1
+    },
+    {
+        "id": 10,
+        "author": "Hannah Lee",
+        "title": "Learning Coding",
+        "content": "Best resources to start learning programming.",
+        "likes": 1
+    },
+    {
+        "id": 11,
+        "title": "Reflections On Faith",
+        "author": "Ebi",
+        "content": "Faith is more than belief\u2014it\u2019s a journey of trust, hope, and resilience. It often guides us through life\u2019s uncertainties, offering comfort when challenges arise and perspective when doubts emerge. Reflecting on faith encourages self-awareness, empathy, and a deeper connection to the world and people around us.\r\n\r\nFaith can be quiet and personal, a private conversation with one\u2019s inner self, or expressed through community and shared experiences. It shapes our values, influences decisions, and inspires perseverance in moments of adversity. Reflecting on faith is not about certainty, but about exploring the depth of one\u2019s convictions and finding meaning in both life\u2019s triumphs and trials.\r\n\r\nUltimately, reflections on faith remind us to stay grounded, compassionate, and open to the mysteries of life\u2014embracing both questions and answers as part of our personal and spiritual growth.",
+        "likes": 8
+    }
 ]

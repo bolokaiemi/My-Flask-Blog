@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testimonies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='testimonies.css') }}">
+</head>
+<body>
+
+<h1>Testimonies for "{{ post.title }}"</h1>
+
+<div class="post">
+
+    {% if testimonies %}
+        {% for t in testimonies %}
+            <div class="testimony-box">
+                <p>{{ t[1] }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No testimonies yet.</p>
+    {% endif %}
+
+</div>
+
+<a href="{{ url_for('home') }}" class="add-btn">⬅ Back</a>
+
+</body>
+</html>

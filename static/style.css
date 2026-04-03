@@ -1,4 +1,6 @@
-/* Modern Gradient Background */
+/* =========================
+   GLOBAL
+========================= */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
@@ -7,7 +9,13 @@ body {
     margin: 0;
 }
 
-/* Header */
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   HEADER
+========================= */
 .header {
     padding: 15px 30px;
     background: linear-gradient(135deg, #667eea, #764ba2);
@@ -19,26 +27,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
 }
 
+/* LOGO */
 .logo-container {
     display: flex;
     align-items: center;
-    text-decoration: none;
 }
 
 .logo {
     height: 45px;
 }
 
-.logo-text {
-    margin-left: 10px;
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    display: flex;
+    justify-content: center;
 }
 
-.navbar ul {
+.nav-links {
     display: flex;
     list-style: none;
     gap: 30px;
@@ -46,17 +56,48 @@ body {
     padding: 0;
 }
 
-.navbar a {
-    text-decoration: none;
+.nav-links li a {
     color: white;
-    font-weight: 500;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
-.navbar a:hover {
+.nav-links li a:hover {
     opacity: 0.7;
 }
 
+/* =========================
+   AUTH SECTION
+========================= */
+.auth-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* LOGIN / LOGOUT */
+.auth-link a {
+    color: white;
+    background: #4da3ff;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.auth-link a:hover {
+    background: #357bd8;
+    color: white;
+}
+
+/* USER NAME */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
 .profile-pic {
     height: 90px;
     width: 90px;
@@ -65,21 +106,27 @@ body {
     border: 2px solid white;
 }
 
+/* =========================
+   TITLE
+========================= */
 .title {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
     font-size: 2.2rem;
     font-weight: bold;
+    color: white;
 }
 
-/* Post Cards */
+/* =========================
+   POSTS
+========================= */
 .post {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 45px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: 0.2s ease;
 }
 
 .post:hover {
@@ -93,100 +140,149 @@ body {
 }
 
 .post p {
-    margin: 10px 0;
     line-height: 1.6;
 }
 
-/* Buttons */
+/* =========================
+   BUTTONS
+========================= */
 .add-btn, .update-btn, .delete-btn, .like-btn, .testimony-btn {
     display: inline-block;
     margin: 5px 5px 10px 0;
     padding: 10px 18px;
-    text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+/* ADD */
 .add-btn {
-    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
     color: white;
 }
-.add-btn:hover { transform: translateY(-2px); opacity: 0.9; }
 
+/* UPDATE */
 .update-btn {
-    background: linear-gradient(45deg, #2980b9 0%, #3498db 100%);
+    background: linear-gradient(45deg, #2980b9, #3498db);
     color: white;
 }
-.update-btn:hover { transform: translateY(-2px); opacity: 0.9; }
 
+/* DELETE */
 .delete-btn {
-    background: linear-gradient(45deg, #c0392b 0%, #e74c3c 100%);
+    background: linear-gradient(45deg, #c0392b, #e74c3c);
     color: white;
 }
-.delete-btn:hover { transform: translateY(-2px); opacity: 0.9; }
 
+/* LIKE */
 .like-btn {
-    background: linear-gradient(45deg, #f39c12 0%, #f1c40f 100%);
+    background: linear-gradient(45deg, #f39c12, #f1c40f);
     color: white;
+    border: none;
+    cursor: pointer;
 }
-.like-btn:hover { transform: translateY(-2px); opacity: 0.9; }
 
+/* TESTIMONY */
 .testimony-btn {
-    background-color: yellow;
+    background: yellow;
+    color: black;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
-/* Social Media Section */
+/* HOVER EFFECT */
+.add-btn:hover,
+.update-btn:hover,
+.delete-btn:hover,
+.like-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* =========================
+   BUTTON ROW FIX
+========================= */
+.post form {
+    display: inline;
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
 .custom-social-container {
-    width: 100%;           /* full width */
     display: flex;
-    justify-content: flex-end;  /* right-aligned on desktop */
-    flex-wrap: wrap;            /* wraps if needed */
+    justify-content: flex-end;
+    flex-wrap: wrap;
     gap: 12px;
     margin-top: 30px;
 }
 
 .custom-social-link {
-    text-decoration: none;
     color: white;
     padding: 10px 16px;
     border-radius: 5px;
     font-weight: bold;
-    white-space: nowrap;
     min-width: 120px;
     text-align: center;
-    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Platform Colors */
+/* COLORS */
 .facebook { background: #3b5998; }
 .twitter { background: #1da1f2; }
 .instagram { background: #e1306c; }
 .linkedin { background: #0077b5; }
 .youtube { background: #ff0000; }
 
-/* Hover Effect */
 .custom-social-link:hover {
-    opacity: 0.9;
     transform: scale(1.05);
+    opacity: 0.9;
 }
 
-/* Footer */
-.custom-footer {
-    background: #222;
-    color: white;
+/* =========================
+   SIGNUP FORM
+========================= */
+.sign-up.container {
+    background: white;
+    padding: 2rem;
+    width: 320px;
+    border-radius: 12px;
+    margin: 40px auto;
     text-align: center;
-    padding: 15px;
 }
 
-/* MOBILE RESPONSIVE */
+.sign-up input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.sign-up button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 600px) {
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .custom-social-container {
-        justify-content: center; /* center on small screens */
+        justify-content: center;
     }
+
     .custom-social-link {
-        flex: 1 1 40%;  /* 2 per row */
-        margin-bottom: 8px;
+        flex: 1 1 40%;
     }
+
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+    }
+
 }
