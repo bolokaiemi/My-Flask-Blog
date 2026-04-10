@@ -286,3 +286,54 @@ a {
     }
 
 }
+
+
+
+
+/* Container for the delete confirmation */
+.delete-contain {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: #fff4f4; /* soft red/pink to indicate warning */
+    border: 1px solid #ffcccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Heading styles */
+.delete-contain h2 {
+    color: #d9534f; /* bootstrap danger color */
+    margin-bottom: 15px;
+}
+
+.delete-contain h3 {
+    color: #333;
+    margin: 15px 0;
+    font-weight: normal;
+}
+
+/* Paragraph text */
+.delete-contain p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Delete button styling */
+.delete-contain button {
+    padding: 10px 25px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-contain button:hover {
+    background-color: #c9302c;
+}

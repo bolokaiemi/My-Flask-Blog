@@ -1,23 +1,30 @@
 [
     {
-        "id": 9,
-        "author": "George Martin",
-        "title": "Writing Skills",
-        "content": "Improve your writing with these simple techniques.",
-        "likes": 1
-    },
-    {
         "id": 10,
         "author": "Hannah Lee",
         "title": "Learning Coding",
         "content": "Best resources to start learning programming.",
-        "likes": 1
+        "likes": 5
     },
     {
         "id": 11,
         "title": "Reflections On Faith",
         "author": "Ebi",
         "content": "Faith is more than belief\u2014it\u2019s a journey of trust, hope, and resilience. It often guides us through life\u2019s uncertainties, offering comfort when challenges arise and perspective when doubts emerge. Reflecting on faith encourages self-awareness, empathy, and a deeper connection to the world and people around us.\r\n\r\nFaith can be quiet and personal, a private conversation with one\u2019s inner self, or expressed through community and shared experiences. It shapes our values, influences decisions, and inspires perseverance in moments of adversity. Reflecting on faith is not about certainty, but about exploring the depth of one\u2019s convictions and finding meaning in both life\u2019s triumphs and trials.\r\n\r\nUltimately, reflections on faith remind us to stay grounded, compassionate, and open to the mysteries of life\u2014embracing both questions and answers as part of our personal and spiritual growth.",
-        "likes": 8
+        "likes": 11
+    },
+    {
+        "id": 12,
+        "title": "Ebi",
+        "author": "Testimonies and Final Reflections",
+        "content": "Many of the videos featuring young prophets and prophetesses in Nigeria are accompanied by powerful testimonies from followers and viewers. These testimonies often include stories of healing, answered prayers, deliverance from spiritual struggles, and life-changing breakthroughs. Supporters frequently share how messages delivered by these young ministers have strengthened their faith, restored hope, or inspired them to reconnect with their spiritual lives.\r\n\r\nSome testimonies come directly from church members who claim to have witnessed miracles during services, while others emerge from online audiences who feel impacted even through virtual platforms like YouTube. These experiences contribute significantly to the growing popularity and influence of these young figures.\r\n\r\nAt the same time, it is important to approach such testimonies with thoughtful reflection. While many find them encouraging and uplifting, others emphasize the need for discernment, accountability, and careful guidance\u2014especially given the young age of those involved.",
+        "likes": 3
+    },
+    {
+        "id": 14,
+        "title": "The Rise of Young Prophets in Nigeria: A YouTube Phenomenon",
+        "author": "Ebi",
+        "content": "In recent years, Nigeria has seen the emergence of young prophets and prophetesses gaining massive attention, especially on YouTube. These children and teenagers are often featured in viral videos where they preach, prophesy, heal, or lead prayers with remarkable confidence and charisma.\r\n\r\nMany viewers are drawn to their boldness and spiritual expression at such a young age. Their messages often focus on faith, repentance, miracles, and divine revelation. Some of these young ministers have gathered large online followings, with clips shared widely across social media platforms.\r\n\r\nHowever, this trend has also sparked mixed reactions. Supporters see it as evidence of strong spiritual gifting and early divine calling. Critics, on the other hand, question the authenticity of these displays and raise concerns about parental influence, commercialization, and the pressure placed on young individuals.\r\n\r\nYouTube has played a major role in amplifying their visibility, turning local church moments into global conversations. Whether viewed as inspiring or controversial, the phenomenon of young prophets in Nigeria continues to grow and provoke discussion about faith, culture, and the role of children in religious spaces",
+        "likes": 2
     }
 ]
